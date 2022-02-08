@@ -87,18 +87,20 @@ def sublist_of_movies_higher_5(movies):
     sublist = []
     for movie in movies:
         movie_score = movie.get('imdb')
-        movie_title = movie.get('name')
         if movie_score > 5.5:
+            movie_title = movie.get('name')
             sublist.append(movie_title)
+    return sublist
 
 
 """third task"""
 def sorted_by_category(movies,category):
+    list_of_movies = []
     for movie in movies:
-        movie_category = movie.get('category')
-        movie_titles = movie.get('name')
-        if movie_category == category:
-            return movie_titles
+        wanted_category = movie['category']
+        if category == wanted_category:
+            list_of_movies.append(movie)
+    return list_of_movies
 
 """fourth task"""
 
@@ -107,8 +109,8 @@ def avg_imdb_for_all(movies):
     for movie in movies:
         movie_score = movie.get('imdb')
         avg_score = avg_score + movie_score
-        avg_score1 = avg_score / len(movies) 
-    return avg_score1
+    final_avg_score = avg_score / len(movies) 
+    return final_avg_score
     
 
 """fifth task"""
@@ -123,8 +125,8 @@ def score_in_single_category(movies, category):
         if movie_category == category:
             list.append(movie_title)
             avg_score = avg_score + movie_score
-            avg1 = avg_score / len(list)
-    return avg1
+            final_avg_score_single_category = avg_score / len(list)
+    return final_avg_score_single_category
         
 
 
