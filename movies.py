@@ -120,9 +120,9 @@ def score_in_single_category(movies, category):
     list = []
     for movie in movies:
         movie_category = movie.get('category')
-        movie_score = movie.get('imdb')
-        movie_title = movie.get('name')
         if movie_category == category:
+            movie_score = movie.get('imdb')
+            movie_title = movie.get('name')
             list.append(movie_title)
             avg_score = avg_score + movie_score
             final_avg_score_single_category = avg_score / len(list)
