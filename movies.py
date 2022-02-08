@@ -86,10 +86,10 @@ def is_movie_higher_5(movie):
 def sublist_of_movies_higher_5(movies):
     sublist = []
     for movie in movies:
-        movie_score = movie.get('imdb')
-        if movie_score > 5.5:
-            movie_title = movie.get('name')
-            sublist.append(movie_title)
+        movie_info = movie['imdb']
+        if movie_info > 5.5:
+            movie_info
+            sublist.append(movie)
     return sublist
 
 
