@@ -123,6 +123,27 @@ class TestPractice2(unittest.TestCase):
 
         self.assertEqual(result, 3.0)
 
+    def test_avg_imdb_for_all(self):
+        result = avg_imdb_for_all([
+        {
+        "name": "Usual Suspects", 
+        "imdb": 1.0,
+        "category": "Thriller"
+        },
+        {
+        "name": "Hitman",
+        "imdb": 5.0,
+        "category": "Adventure"
+        },
+        {
+        "name": "Dark Knight",
+        "imdb": 3.0,
+        "category": "Adventure"
+        }])
+
+
+        self.assertEqual(result, 5.0)
+
 
 
     def test_score_in_single_category(self):
@@ -144,6 +165,28 @@ class TestPractice2(unittest.TestCase):
         }], 'Adventure')
 
         self.assertEqual(result, 6.0)
+
+    
+
+    def test_score_in_single_category(self):
+        result = score_in_single_category([
+        {
+        "name": "Usual Suspects", 
+        "imdb": 1.0,
+        "category": "Thriller"
+        },
+        {
+        "name": "Hitman",
+        "imdb": 7.0,
+        "category": 'Adventure'
+        },
+        {
+        "name": "Dark Knight",
+        "imdb": 5.0,
+        "category": 'Adventure'
+        }], 'Adventure')
+
+        self.assertEqual(result, 9.0)
 
     
 
