@@ -77,7 +77,7 @@ movies = [
 ]
 
 def is_movie_higher_5(movie):
-    if(movie['imdb'] > 5.5):
+    if movie['imdb'] > 5.5:
         return True
     else:
         return False
